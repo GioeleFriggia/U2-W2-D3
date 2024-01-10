@@ -1,0 +1,16 @@
+// _buttons.scss
+@mixin floating(
+  $radius: 5px,
+  $shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+  $border: 1px solid #ddd
+) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
+}
+
+.button {
+  cursor: pointer;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font_size_small;
+}

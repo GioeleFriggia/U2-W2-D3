@@ -1,0 +1,5 @@
+// _mixins.scss
+@mixin title-big {
+  font-size: $font_size_big;
+  font-weight: bold;
+}

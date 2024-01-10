@@ -1,0 +1,81 @@
+// app.scss
+@import "partials/reset";
+@import "partials/spacings";
+@import "partials/colors";
+@import "partials/fonts";
+@import "partials/buttons";
+@import "partials/mixins";
+@import "partials/animations";
+
+.hero-section {
+  background-color: $bg_hero;
+  padding: $spacing-md;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .logo img {
+    max-width: 20%;
+
+    height: auto;
+  }
+  .headline {
+    color: $text_color;
+    font-family: $font_family;
+    font-size: $font_size_big;
+    margin-bottom: $spacing-lg;
+
+    @include title-big; // Chiamata corretta del mixin title-big
+  }
+
+  .buttons {
+    display: flex;
+
+    button {
+      @include floating;
+      margin-right: $spacing-md;
+    }
+  }
+
+  .hero-image {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include grid(4);
+}
+
+.grid-item {
+  flex: 0 0 calc(100% / 4);
+
+  img {
+    width: 100%;
+    border: 1px solid #ddd;
+    @include floating(
+      $radius: 8px,
+      $shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+      $border: none
+    );
+  }
+
+  h3 {
+    margin-top: $spacing-md;
+    color: $text_color;
+    font-family: $font_family;
+    font-size: $font_size_normal;
+  }
+
+  p {
+    color: $text_color;
+    font-family: $font_family;
+    font-size: $font_size_small;
+  }
+}

@@ -1,0 +1,28 @@
+// _spacings.scss
+$spacing-sm: 5px;
+$spacing-md: 10px;
+$spacing-lg: 20px;
+// Mixin per generare classi di spaziature
+@mixin spacings {
+  .padding-block-sm {
+    padding-block: $spacing-sm;
+  }
+
+  .padding-block-md {
+    padding-block: $spacing-md;
+  }
+
+  .padding-block-lg {
+    padding-block: $spacing-lg;
+  }
+
+  // Aggiungi altre classi di spaziature secondo necessità
+}
+
+// Chiamata della mixin per generare le classi di spaziature
+@include spacings;
+
+// Mixin per la griglia
+@mixin grid($columns) {
+  flex: 0 0 calc(100% / #{$columns});
+}
